@@ -1,0 +1,95 @@
+
+<p-growl [value]="msgs" sticky="sticky"></p-growl>
+<div  class="newUserBg">
+    <div class="registerFont">
+        Registration Form
+    </div>
+    <div class="userFields">
+        <div style="margin-bottom: 12px;">
+            <div class="spacing" >Name</div>
+            <div>
+                <input name="name" [(ngModel)]="newUserDetails.name" type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Email-Id</div> 
+            <input name="emailId" [(ngModel)]="newUserDetails.emailId" type="text" class="ui-inputtext"/>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Password</div> 
+            <div>
+                <input name="password" [(ngModel)]="newUserDetails.password" type="password" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing"> Confirm Password</div> 
+            <div>
+                <input name="confirmPassword" [(ngModel)]="newUserDetails.confirmPassword" type="password" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Mobile Number</div>
+            <div>
+                <input name="mobileNumber" [(ngModel)]="newUserDetails.mobileNumber" type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Alternate Mobile Number</div>
+            <div>
+                <input name="alternateMobileNumber" [(ngModel)]="newUserDetails.alternateMobileNumber" type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="userFields">
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Building Name</div> 
+            <div>
+                <input name="buildingName" [(ngModel)]="newUserDetails.buildingName"  type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Street Number</div> 
+            <div>
+                <input name="streetNumber" [(ngModel)]="newUserDetails.streetNumber"  type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Country</div>
+            <div>
+                <input name="country" [(ngModel)]="newUserDetails.country" type="text" class="ui-inputtext"/>
+            </div>
+        </div> 
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">State</div>
+            <div>
+                <input name="state" [(ngModel)]="newUserDetails.state" type="text" class="ui-inputtext"/>
+            </div>
+        </div>        
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">City</div> 
+            <div>
+                <input name="city" [(ngModel)]="newUserDetails.city"  type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+            <div class="spacing">Pincode</div> 
+            <div>
+                <input name="pincode" [(ngModel)]="newUserDetails.pincode"  type="text" class="ui-inputtext"/>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="width: 9%;float: left;margin-left: 37.5%;margin-top: 42px;" >
+            <button pButton type="text" (click)="showSuccess()" class="ui-button-success ui-button" label="Register" [disabled]="(newUserDetails.name == '') || (newUserDetails.emailId == '') || (newUserDetails.password =='') || (newUserDetails.mobileNumber == null ) || (newUserDetails.buildingName == '') || (newUserDetails.streetNumber == null ) || (newUserDetails.country == '') || (newUserDetails.city == '') || (newUserDetails.state == '') || (newUserDetails.pincode == null )"></button>
+        </div>
+
+        <div style="width: 9%;float: left;margin-left: 6%;margin-top: 42px;">
+            <button pButton type="text" (click)="loginPage()" label="Login" class="ui-button"></button>
+        </div>
+    </div>
+</div>
+
+
+

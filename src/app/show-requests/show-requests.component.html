@@ -1,0 +1,32 @@
+
+<span><h1>Requests</h1></span>
+<div>
+    <div *ngFor="let returnedRequest of showRequests.returnedRequests; let i = index">
+        <div *ngFor="let request of returnedRequest.requests; let reviewIndex = index">
+            <span>Requester EmailId : {{request.requesterEmailId}}</span><br>
+            <span>Book Name : {{request.bookName}}</span><br>
+            <span>ISBN : {{request.isbn}}</span><br>
+            <span>Date : {{request.date}}</span><br>
+            <span>Status : {{request.status}}</span><br>
+                <button pButton type="text" (click)="accept(i,reviewIndex)" label="Accept Request" class="buttonSize" [disabled]="request.status != ''"></button>
+                <button pButton type="text" (click)="reject(i,reviewIndex)" label="Reject Request" class="buttonSize" [disabled]="request.status != ''"></button>
+        </div>
+    </div>
+</div>
+
+<span><h1>Messages</h1></span>
+<div>
+    <div *ngFor="let returnedMessage of showRequests.returnedMessages; let i = index">
+        <div *ngFor="let message of returnedMessage.messages; let reviewIndex = index">
+            <span>Book Owner EmailId : {{message.bookOwnerEmailId}}</span><br>
+            <span>Book Name : {{message.bookName}}</span><br>
+            <span>ISBN : {{message.isbn}}</span><br>
+            <span>date : {{message.date}}</span><br>
+            <span>Status : {{message.status}}</span>
+        </div>
+    </div>
+</div>
+
+<div style="margin-left: 415px;">
+    <button pButton type="text" (click)="showListPage()" label="List Of Books" class="buttonSize"></button>
+</div>

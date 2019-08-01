@@ -1,0 +1,45 @@
+<div class="mainBg">
+    <div class="contentDiv">
+        <p-growl [value]="msgs" life="1500"></p-growl>
+        <div class="divSpacing">
+            <input name="bookName" [(ngModel)]="addBookDetails.bookName" placeholder="Book Name" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="author" [(ngModel)]="addBookDetails.author" placeholder="Author" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="isbnNumber" [(ngModel)]="addBookDetails.isbn" placeholder="ISBN" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="noOfPages" [(ngModel)]="addBookDetails.noOfPages" placeholder="Number Of Pages" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="genre" [(ngModel)]="addBookDetails.genre" placeholder="Genre" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="cover" [(ngModel)]="addBookDetails.cover" placeholder="Cover Hardcover/Softcover" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="price" [(ngModel)]="addBookDetails.price" placeholder="Price Of Book" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="noOfEditions" [(ngModel)]="addBookDetails.noOfEditions" placeholder="Number Of Editions" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="publisher" [(ngModel)]="addBookDetails.publisher" placeholder="Publisher" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="publicationYear" [(ngModel)]="addBookDetails.publicationYear" placeholder="Publication Year" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <input name="language" [(ngModel)]="addBookDetails.language" placeholder="Language" type="text" class="ui-inputtext"/>
+        </div>
+        <div class="divSpacing">
+            <button pButton type="text" (click)="add()" label="Add Book" class="ui-button" [disabled]="(addBookDetails.bookName == '') || (addBookDetails.author == '') || (addBookDetails.isbn == null) || (addBookDetails.noOfPages == null) || (addBookDetails.genre == '') || (addBookDetails.cover == '') || (addBookDetails.price == null) || (addBookDetails.noOfEditions == null) || (addBookDetails.publisher == '') || (addBookDetails.publicationYear == null) || (addBookDetails.language == '')">
+            </button> 
+        </div>
+        <div class="divSpacing">
+            <button pButton type="text" (click)="showListPage()" label="List Of Books" class="ui-button"></button>
+        </div>
+    </div>
+</div>

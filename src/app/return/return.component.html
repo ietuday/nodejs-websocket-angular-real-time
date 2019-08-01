@@ -1,0 +1,12 @@
+<div>
+    <p-dataTable  [value]="returnBookDetails.returnedBooks" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" [contextMenu]="cm" selectionMode="single" [(selection)]="returnSelectedBook">  
+        <p-column field="bookName" header="Book Name"></p-column>
+        <p-column field="bookOwnerEmailId" header="Book Owner Email Id"></p-column>
+        <p-column field="date" header="Requested Date"></p-column>
+        <p-column field="isbn" header="ISBN"></p-column>
+    </p-dataTable>
+    <p-contextMenu #cm [model]="menuItem.items"></p-contextMenu>
+</div>
+<div style="margin-left: 415px;">
+    <button pButton type="text" (click)="showListPage()" label="List Of Books" class="buttonSize"></button>
+</div>

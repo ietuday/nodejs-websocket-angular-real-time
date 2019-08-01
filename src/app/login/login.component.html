@@ -1,0 +1,19 @@
+<div class="mainbackground">
+    <div class="loginFont">
+        Login Page
+    </div>
+    <div class="box">
+        <div class="emailIdDiv">
+            <input name="emailId" [(ngModel)]="loginDetails.emailId" placeholder="Email-Id" type="text" class="ui-inputtext"/> 
+        </div>
+        <div class="emailIdDiv" >
+            <input name="password" [(ngModel)]="loginDetails.password" placeholder="Password" type="password" class="ui-inputtext"/>  
+        </div>
+        <div class="loginButton">
+            <button pButton type="text" (click)="login()" label="Login" [disabled]="(loginDetails.emailId =='') || (loginDetails.password == '')" class="ui-button"></button>
+        </div>
+        <div class="newUserButton">
+            <button pButton type="text" (click)="newUser()" label="New User" class="ui-button"></button>
+        </div>
+    </div>
+</div>

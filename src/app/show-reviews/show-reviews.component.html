@@ -1,0 +1,12 @@
+<div class="showReviewsBg">
+    <div class="showReviewDiv" *ngFor="let returnedReview of showReviews.returnedReviews; let i = index">
+         <div *ngFor="let review1 of returnedReview.reviews; let reviewIndex = index">
+            <span>Username : {{review1.name}}</span><span>&nbsp;</span><span>Date : {{review1.date}}</span><br>
+            <span>Ratings : {{review1.value}}</span><br>
+            <span>Review : {{review1.review}}</span>
+        </div>
+    </div>
+    <div style="margin-left: 415px;">
+        <button pButton type="text" (click)="showListPage()" label="List Of Books" class="buttonSize"></button>
+    </div>
+</div>

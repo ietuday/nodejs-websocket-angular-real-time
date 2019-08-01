@@ -1,0 +1,57 @@
+.mainbackground{
+    background-image : url("../../assets/images/login.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 667px;
+    color: white;
+}
+
+.box{
+    width: 75%;
+    margin-left: 252px;
+    margin-top: 134px;
+}
+
+.loginFont{
+    text-align: center;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 70px;
+}
+
+.emailIdDiv{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 192px;
+    margin-top: 18px;
+}
+
+.emailIdDiv .ui-inputtext{
+    width: 518px;
+    height: 39px;
+}
+
+.loginButton{
+    width: 21%;
+    float: left;
+    margin-left: 295px;
+    margin-top: 37px;
+}
+
+.loginButton .ui-button{
+    width: 110px;
+    height: 40px;
+    font-size: 17px;
+}
+
+.newUserButton{
+    margin-top: 37px;
+}
+
+.newUserButton .ui-button{
+    width: 110px;
+    height: 40px;
+    font-size: 17px;
+}
